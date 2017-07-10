@@ -17,7 +17,7 @@ We highly recommend using the [Anaconda](https://www.continuum.io/downloads) eco
 $ conda install -c asmeurer gcc=4.8.5
 ```
 
-For the radial velocities tutorials, we will create a Python 2.7 environment called ``rv``, and install the packages ``numpy``, ``scipy``, ``cython``, ``astropy`` and ``matplotlib`` right from the start:
+For the radial velocities tutorials, we will create a Python 2.7 environment called ``rv``, and install the packages ``numpy``, ``scipy``, ``cython``, ``astropy``, ``pandas`` and ``matplotlib`` right from the start:
 
 ```
 $ conda create -n rv python=2.7 numpy scipy cython astropy matplotlib pandas
@@ -32,7 +32,7 @@ $ source activate rv
 And when you want to leave the environment, just use the following command:
 
 ```
-$ source deactivate rv
+$ source deactivate
 ```
 
 Now, let's activate the ``rv`` environment and install some additional packages using the command ``pip``:
