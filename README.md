@@ -1,6 +1,6 @@
 # RV_PS2017
 
-Jupyter Notebooks for the **radial velocities** tutorials at the Precision Spectroscopy Workshop 2017, held at the Instituto de Astronomia, Geofísica e Ciências Atmosféricas (Universidade de São Paulo) in August 2017.
+Jupyter Notebooks for the **radial velocities** tutorials at the Precision Spectroscopy Workshop 2017, held at the *Instituto de Astronomia, Geofísica e Ciências Atmosféricas* (*Universidade de São Paulo*) in August 2017.
 
 Summary of this README:
 1. Requirements
@@ -9,14 +9,14 @@ Summary of this README:
 
 ### 1. Requirements
 
-In order to follow this tutorial, it is necessary to have basic knowledge of command line in Unix-based systems. Knowing how to use ``git`` and ``conda`` is recommended. The Python packages ``pandas``, ``radvel`` and ``radial`` (and their dependencies) need to be installed (see below for instructions).
+In order to follow this tutorial, it is necessary to have basic knowledge of command line in Unix-based systems. Knowing how to use ``git`` and ``conda`` is recommended. The Python packages ``pandas``, ``radvel`` and ``radial`` (and their dependencies) need to be installed (see item 2). Basic knowledge of radial velocities and orbital parameters is also recommended (see item 3).
 
 ### 2. Setup
 
 We highly recommend using the [Anaconda](https://www.continuum.io/downloads) ecosystem, since it allows us to use the ``conda`` Python package and environment manager. Additionally, we recommend downloading the Python 3 version of Anaconda -- but do not worry about Python 2 codes, because we can easily setup a Python 2 environment using ``conda``.
 
 **Important note**: If you are a Linux user, you may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use the following command to fix it:
-```bash
+```
 conda install -c asmeurer gcc=4.8.5
 ```
 
