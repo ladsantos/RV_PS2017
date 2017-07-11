@@ -9,7 +9,7 @@ Summary of this README:
 
 ### 1. Requirements
 
-In order to follow this tutorial, it is necessary to have basic knowledge of command line in Unix-based systems. Knowing how to use ``git`` and ``conda`` is recommended. The Python packages ``pandas``, ``radvel`` and ``radial`` (and their dependencies) need to be installed (see item 2). Basic knowledge of radial velocities and orbital parameters is also recommended (see item 3).
+In order to follow this tutorial, it is necessary to have basic knowledge of command line in Unix-based systems. Having experience with Jupyter notebooks (a.k.a. IPython notebooks) and knowing how to use ``git`` and ``conda`` is recommended. The Python packages ``pandas``, ``radvel`` and ``radial`` (and their dependencies) need to be installed (see item 2). Basic knowledge of radial velocities and orbital parameters is also recommended (see item 3).
 
 ### 2. Setup
 
@@ -70,3 +70,4 @@ Further reading for the enthusiasts:
 * [Fitting a plane to data](http://dan.iel.fm/posts/fitting-a-plane/)
 * [A practical guide to the Lomb-Scargle Periodogram](http://jakevdp.github.io/blog/2017/03/30/practical-lomb-scargle/)
 * [Frequentism vs. Bayesianism](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/) (SPOILER: Frequentism sucks)
+* [Toolkit for planet detection and characterization](https://reddots.space/toolkit/)
