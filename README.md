@@ -16,7 +16,7 @@ In order to follow this tutorial, it is necessary to have basic knowledge of com
 We highly recommend using the [Anaconda](https://www.continuum.io/downloads) ecosystem, since it allows us to use the ``conda`` Python package and environment manager. Additionally, we recommend downloading the Python 3 version of Anaconda -- but do not worry about Python 2 codes, because we can easily setup a Python 2 environment using ``conda``.
 
 **Important note**: If you are a Linux user, you may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use the following command to fix it:
-```
+```shell
 conda install -c asmeurer gcc=4.8.5
 ```
 
