@@ -3,9 +3,10 @@
 Jupyter Notebooks for the **radial velocities** tutorials at the Precision Spectroscopy Workshop 2017, held at the *Instituto de Astronomia, Geofísica e Ciências Atmosféricas* (*Universidade de São Paulo*) in August 2017.
 
 Summary of this README:
-1. Requirements
-2. Setup
-3. Technical background
+1. [Requirements](https://github.com/RogueAstro/RV_PS2017#1-requirements)
+2. [Setup](https://github.com/RogueAstro/RV_PS2017#2-setup)
+3. [Technical background](https://github.com/RogueAstro/RV_PS2017#3-technical-background)
+4. [Known issues](https://github.com/RogueAstro/RV_PS2017#4-known-issues)
 
 ### 1. Requirements
 
@@ -14,11 +15,6 @@ In order to follow this tutorial, it is necessary to have basic knowledge of com
 ### 2. Setup
 
 We highly recommend using the [Anaconda](https://www.continuum.io/downloads) ecosystem, since it allows us to use the ``conda`` Python package and environment manager. Additionally, we recommend downloading the Python 3 version of Anaconda -- but do not worry about Python 2 codes, because we can easily setup a Python 2 environment using ``conda``.
-
-**Important note**: If you are a Linux user, you may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use the following command to fix it:
-```
-conda install -c asmeurer gcc=4.8.5
-```
 
 For the radial velocities tutorials, we will create a Python 2.7 environment called ``rv``, and install the packages ``numpy``, ``scipy``, ``cython``, ``astropy``, ``pandas`` and ``matplotlib`` right from the start:
 
@@ -69,5 +65,12 @@ Further reading for the enthusiasts:
 * [Basic ``emcee`` example](http://dan.iel.fm/emcee/current/user/line/)
 * [Fitting a plane to data](http://dan.iel.fm/posts/fitting-a-plane/)
 * [A practical guide to the Lomb-Scargle Periodogram](http://jakevdp.github.io/blog/2017/03/30/practical-lomb-scargle/)
-* [Frequentism vs. Bayesianism](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/) (SPOILER: Frequentism sucks)
+* [Frequentism vs. Bayesianism](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/) (Spoiler: Frequentism sucks)
 * [Toolkit for planet detection and characterization](https://reddots.space/toolkit/)
+
+### 4. Known issues
+
+If you are a Linux user, you may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use the following command to fix it:
+```
+conda install -c asmeurer gcc=4.8.5
+```
