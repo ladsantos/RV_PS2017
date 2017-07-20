@@ -1,6 +1,6 @@
 # RV_PS2017
 
-Jupyter Notebooks for the **radial velocities** tutorials at the Precision Spectroscopy Workshop 2017, held at the *Instituto de Astronomia, Geofísica e Ciências Atmosféricas* (*Universidade de São Paulo*) in August 2017.
+Jupyter Notebooks for the **radial velocities** tutorial at the Precision Spectroscopy Workshop 2017, held at the *Instituto de Astronomia, Geofísica e Ciências Atmosféricas* (*Universidade de São Paulo*) in August 2017. If you have suggestions or corrections, just [open a GitHub issue](https://github.com/RogueAstro/RV_PS2017/issues).
 
 Summary of this README:
 1. [Requirements](https://github.com/RogueAstro/RV_PS2017#1-requirements)
@@ -70,7 +70,9 @@ Further reading for the enthusiasts:
 
 ### 4. Known issues
 
-If you are a Linux user, you may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use the following command to fix it:
+You may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use a custom installation of ``gcc``. First, activate the ``rv`` environment if is not activated yet, and install the custom ``gcc``:
 ```
+source activate rv
 conda install -c asmeurer gcc=4.8.5
 ```
+This will install the custom ``gcc`` in the ``rv`` environment, but will leave the original installation of ``gcc`` untouched outside of this specific environment.
