@@ -12,6 +12,8 @@ Summary of this README:
 
 In order to follow this tutorial, it is necessary to have basic knowledge of command line in Unix-based systems. Having experience with Jupyter notebooks (a.k.a. IPython notebooks) and knowing how to use ``git`` and ``conda`` is recommended. The Python packages ``pandas``, ``radvel`` and ``radial`` (and their dependencies) need to be installed (see item 2). Basic knowledge of radial velocities and orbital parameters is also recommended (see item 3).
 
+Also, make sure that ``pdflatex`` is installed. You can get ``pdflatex`` by installing the TexLive package or other LaTeX distributions. By default it is expected to be in your system’s path, but you may specify a path to ``pdflatex`` using the ``--latex-compiler`` option at the ``radvel`` report step.
+
 ### 2. Setup
 
 We highly recommend using the [Anaconda](https://www.continuum.io/downloads) ecosystem, since it allows us to use the ``conda`` Python package and environment manager. Additionally, we recommend downloading the Python 3 version of Anaconda -- but do not worry about Python 2 codes, because we can easily setup a Python 2 environment using ``conda``.
@@ -70,9 +72,15 @@ Further reading for the enthusiasts:
 
 ### 4. Known issues
 
+##### 4.1. Compilation of C codes fails
+
 You may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use a custom installation of ``gcc``. First, activate the ``rv`` environment if is not activated yet, and install the custom ``gcc``:
 ```
 source activate rv
 conda install -c asmeurer gcc=4.8.5
 ```
 This will install the custom ``gcc`` in the ``rv`` environment, but will leave the original installation of ``gcc`` untouched outside of this specific environment.
+
+##### 4.2. Jupyter notebooks do not initialize the right kernel
+
+Have you tried turning it off and on again? No, seriously, if you installed ``jupyter`` inside the ``rv`` environment, you need to deactivate and then reactivate the ``rv`` environment again in order to initialize the correct kernel.
