@@ -40,10 +40,12 @@ Now, let's activate the ``rv`` environment and install some additional packages 
 
 ```
 source activate rv
-pip install emcee corner lmfit pp radvel jupyter
+pip install emcee corner lmfit pp jupyter
 ```
 
-[``radvel``](http://radvel.readthedocs.io/en/master/index.html) is one of the radial velocities packages we will use in this tutorial. It is authored by B. J. Fulton and E. Petigura. Unfortunately it works only in Python 2, which is why we setup the ``rv`` environment with ``python=2.7``. The other package we will use in this tutorial is [``radial``](https://github.com/RogueAstro/radial), which is authored by L. dos Santos (it works in both Python 2 and 3, but it's optimized for Python 3).
+**Note**: ``jupyter`` can also be install using the command ``conda install jupyter``.
+
+Now we will proceed to install the radial radial velocities fitting codes. [``radvel``](http://radvel.readthedocs.io/en/master/index.html) is one of the RV packages we will use in this tutorial. It is authored by B. J. Fulton and E. Petigura. Unfortunately it works only in Python 2, which is why we setup the ``rv`` environment with ``python=2.7``. The other package we will use in this tutorial is [``radial``](https://github.com/RogueAstro/radial), which is authored by L. dos Santos (it works in both Python 2 and 3, but it's optimized for Python 3).
 
 In order to install ``radial``, go to the terminal and navigate to the folder you want to save the source code and issue the commands:
 
@@ -52,6 +54,16 @@ git clone https://github.com/RogueAstro/radial.git
 cd radial
 python setup.py develop
 ```
+
+To install ``radvel``, I recommend compiling the source code from the authors repository. In the temrinal, navigate to the folder you want to save the source code and:
+
+```
+git clone https://github.com/California-Planet-Search/radvel.git
+cd radvel
+python setup.py develop
+```
+
+You can also clone the [version of ``radvel`` that I forked](https://github.com/RogueAstro/radvel) from the original repository. I plan on modifying ``radvel`` in the near future to work with Python 3 and possibly adding some features here and there. Another option is to use ``pip install radvel``, but I do not recommend it.
 
 ### 3. Technical background
 
@@ -93,4 +105,4 @@ When executing the ``mcmc`` part of ``radvel``, you may run into the following e
 NameError: global name 'Pool' is not defined
 ```
 
-To be honest, I don't exactly know what causes this issue at the moment. I got it in my Mac, but not in my Linux workstation, even though I followed the same setup in both machines. The only solution I found is to install the Python 2 version of Anaconda and use that as the package manager. I will update this README as soon as I identify a solution for this problem.
+To be honest, I don't exactly know what causes this issue at the moment. I got it in my Mac, but not in my Linux workstation, even though I followed the same setup in both machines. The only solutions I found is to either compile ``radvel`` from the source or install the Python 2 version of Anaconda and use that as the package manager.
