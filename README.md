@@ -72,7 +72,7 @@ Further reading for the enthusiasts:
 
 ### 4. Known issues
 
-##### 4.1. Compilation of C codes fails
+#### 4.1. Compilation of C codes fails
 
 You may run into problems when installing Python packages that compile C code with Anaconda. If the installation of the packages ``jupyter`` or ``radvel`` fails, use a custom installation of ``gcc``. First, activate the ``rv`` environment if is not activated yet, and install the custom ``gcc``:
 ```
@@ -81,6 +81,16 @@ conda install -c asmeurer gcc=4.8.5
 ```
 This will install the custom ``gcc`` in the ``rv`` environment, but will leave the original installation of ``gcc`` untouched outside of this specific environment.
 
-##### 4.2. Jupyter notebooks do not initialize the right kernel
+#### 4.2. Jupyter notebooks do not initialize the right kernel
 
 Have you tried turning it off and on again? No, seriously, if you installed ``jupyter`` inside the ``rv`` environment, you need to deactivate and then reactivate the ``rv`` environment again in order to initialize the correct kernel.
+
+#### 4.3. I get a ``NameError`` when running MCMC
+
+When executing the ``mcmc`` part of ``radvel``, you may run into the following error:
+
+```
+NameError: global name 'Pool' is not defined
+```
+
+To be honest, I don't exactly know what causes this issue at the moment. I got it in my Mac, but not in my Linux workstation, even though I followed the same setup in both machines. The only solution I found is to install the Python 2 version of Anaconda and use that as the package manager. I will update this README as soon as I identify a solution for this problem.
