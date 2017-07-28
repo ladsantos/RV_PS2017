@@ -55,7 +55,7 @@ cd radial
 python setup.py develop
 ```
 
-To install ``radvel``, I recommend compiling the source code from the authors repository. In the temrinal, navigate to the folder you want to save the source code and:
+To install ``radvel``, I recommend compiling the source code from the authors repository. In the terminal, navigate to the folder you want to save the source code and:
 
 ```
 git clone https://github.com/California-Planet-Search/radvel.git
